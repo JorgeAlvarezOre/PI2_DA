@@ -2,6 +2,7 @@
 - Notebooks > Readme.md > Dashboard > Repositorio
 - Readme.md: Detalle de archivos y carpetas del  repositorio. Reporte de análisis en base a dashboards
 - ¿Mapas? con data de cámaras y comunas
+- Archivo enviroment
 
 # Comandos
 - conda create --name PI2 python==3.11 ipykernel numpy pandas matplotlib seaborn openpyxl geopandas
