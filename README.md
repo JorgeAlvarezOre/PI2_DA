@@ -22,7 +22,7 @@ El proyecto se desarrolló siguiendo estos pasos:
 
 Se utilizó las siguientes herramientas (Stack tecnológico):
 
-![Static Badge](https://img.shields.io/badge/Python-gray?style=flat&logo=python) ![Static Badge](https://img.shields.io/badge/-Pandas-gray?style=flat&logo=pandas) ![Static Badge](https://img.shields.io/badge/Numpy-gray?style=flat&logo=numpy) ![Static Badge](https://img.shields.io/badge/-Matplotlib-gray?style=flat&logo=matplotlib) ![Static Badge](https://img.shields.io/badge/-Seaborn-gray?style=flat&logo=seaborn) ![Static Badge](https://img.shields.io/badge/PowerBI-gray?style=flat&logo=powerbi)
+&nbsp; &nbsp; &nbsp; ![Static Badge](https://img.shields.io/badge/Python-gray?style=flat&logo=python) ![Static Badge](https://img.shields.io/badge/-Pandas-gray?style=flat&logo=pandas) ![Static Badge](https://img.shields.io/badge/Numpy-gray?style=flat&logo=numpy) ![Static Badge](https://img.shields.io/badge/-Matplotlib-gray?style=flat&logo=matplotlib) ![Static Badge](https://img.shields.io/badge/-Seaborn-gray?style=flat&logo=seaborn) ![Static Badge](https://img.shields.io/badge/PowerBI-gray?style=flat&logo=powerbi)
 
 
 ## Estructura del repositorio
@@ -51,7 +51,79 @@ Durante el **Proceso de EDA (Análisis Exploratorio de Datos)**, se analizaron l
 
 Luego el **Proceso de KPI (Indicador Clave de Desempeño)**, que sigue del Análisis Exploratorio de Datos, se utiliza los dataset resultantes [homicidios_limpio.csv](Datasets/homicidios_limpio.csv), [lesiones_limpio.csv](Datasets/lesiones_limpio.csv) y las comunas extraídas de fuente de terceros [Comunas](Notebooks/mapa_comunas.csv)  inicialmente en un Notebook [03_KPIs.ipynb](Notebooks/03_KPIs.ipynb) para finalmente presentarlos mediante en Dashboard de Power BI. La separación es que en los Notebooks de Python es más facil experimentar para encontrar insights y en los dashboard de Power Bi para moestrar lo encontrado, aunque ambas herramientas se podrían utilizar para analizar y mostrar.
 
-Desarrollo (ETL, EDA y KPI y textos)
+## Análisis a profundidad de los datos
 
-Conclusiones
+### Siniestros por comuna
+Se destaca que la Comuna 1 presenta mayor incidentes, seguido de las comunas 4 y 9, tanto en términos de lesionados como de víctimas fatales.
+
+Se aprecia que principalmente solo se registra una única víctima tanto en lesiones como homicidios (muy rara vez 2 o 3 víctimas).
+
+![Siniestros_por_comuna](Imágenes/01_Siniestros_por_comuna.png)
+![Siniestros_por_comuna_desagregado](Imágenes/02_Siniestros_por_comuna_desagregado.png)
+
+### Siniestros por año
+En el análisis anual de lesiones, contamos con información correspondiente a los años 2019, 2020 y 2021. Se destaca que el año 2019 registró la mayor proporción de víctimas por lesiones en accidentes, con un 42.7%. Por otro lado, en el caso de los homicidios, disponemos de datos que abarcan desde 2016 hasta 2021, siendo el año 2018 el que presentó la tasa más alta de fatalidades por accidentes, con un 20.4%, seguido de cerca por los años 2016 (también con un 20.4%) y 2017 (con un 19.5%). En ambos conjuntos de datos, se observa que el año 2020 tuvo la menor cantidad de víctimas, lo cual podría estar relacionado con las medidas de confinamiento implementadas por el COVID 19.
+
+![Siniestros_por_año](Imágenes/03_Siniestros_por_año.png)
+
+### Siniestros por tipo de calle
+Tanto los accidentes mortales como los que no resultan en fatalidades ocurren principalmente en avenidas, y en menor medida, en calles. Sin embargo, cuando se examinan únicamente los siniestros mortales, las avenidas sobresalen notoriamente como el escenario más común.
+
+![Siniestros_por_tipo_de_calle](Imágenes/04_Siniestros_por_tipo_de_calle.png)
+
+### Siniestros por franja horaria
+Los dos gráficos indican que el intervalo de tiempo con la menor cantidad de lesiones debido a accidentes ocurre de la 01:00 a las 06:00 horas. Por otro lado, se observa que los accidentes mortales tienden a suceder con mayor frecuencia entre las 05:00 y las 07:00 horas de la mañana. La cantidad de lesionados por accidentes alcanza su punto máximo en el horario de 12:00 del mediodía a las 18:00 horas. Además, las 02:00 de la madrugada y las 13:00 horas son los momentos del día con la menor cantidad de muertes registradas.
+
+![Siniestros_por_franja_horaria](Imágenes/05_Siniestros_por_franja_horaria.png)
+
+### Siniestros por sexo
+En ambos casos, ya sean lesionados o víctimas mortales, el porcentaje de individuos de género masculino afectados es del **67%** y **76.6%**, respectivamente. Aunque podría interpretarse que las personas de género femenino están menos expuestas a accidentes, es importante considerar que, en Argentina, solo el **35%** de las mujeres posee licencia de conducir (1).
+
+1. Ministerio de Transporte de Argentina. (2023). *Principales Indicadores de la Seguridad Vial con Perspectiva de Género en Argentina*. Obtenido de: https://www.argentina.gob.ar/sites/default/files/2018/12/ansv_informe-con-perspectiva-de-genero-en-argentina-marzo-2023.pdf
+
+![Siniestros_por_genero](Imágenes/06_Siniestros_por_genero.png)
+
+### Siniestros por edad
+Los más afectados son los del rango de edades entre 20 y 40 años
+
+![Siniestros_por_edad](Imágenes/07_Siniestros_por_edad.png)
+
+### Siniestros por mes
+La mayor cantidad de lesiones suceden en los meses de octubre, marzo y diciembre, y la mayor cantidad de homicidios suceden en el mes diciembre
+
+![Siniestros_por_mes](Imágenes/08_Siniestros_por_mes.png)
+
+### Linea de tiempo
+Se observa la drástica disminución de lesiones y homicidios en épocas de cuarentenas (2020), volviendo a subir luego de esta aunque sin regresar a niveles pre-pandemia
+
+![Linea_de_tiempo](Imágenes/09_Linea_de_tiempo.png)
+
+### Siniestros por tipo de vehículos (acusados o víctimas)
+Se observa que 'autos', 'transporte público' y 'camionetas' son los vehiculos acusdos de provocar más lesionados, mientras que los 'autos', 'pasajeros' y 'cargas' los de mayor acusaods de homicidios.
+
+Se observa que 'motos', 'autos', 'ciclista' y 'peatón' son los vehiculos más lesionados, de igual manera las 'motos', 'autos' y 'peatones' los de mayor homicidios.
+
+![Siniestros_por_tipo_de_vehículos__acusados](Imágenes/10_Siniestros_por_tipo_de_vehículos__acusados.png)
+![Siniestros_por_tipo_de_vehículos__víctimas](Imágenes/11_Siniestros_por_tipo_de_vehículos__víctimas.png)
+
+## Cómo Contribuir
+
+1. **Análisis continuo**: Se recomienda mantener un seguimiento constante de los datos sobre homicidios en siniestros viales en la Ciudad de Buenos Aires. Esto permitirá identificar tendencias a lo largo del tiempo y evaluar la efectividad de las medidas implementadas.
+
+2. **Enfoque en educación vial**: Se propone desarrollar iniciativas de educación vial dirigidas a toda la población. Esto podría incluir campañas de concientización sobre prácticas de conducción seguras y el fomento del respeto a las normas de tráfico.
+
+3. **Intervenciones específicas por tipo de vehículo**: Dado que las motocicletas están frecuentemente involucradas en accidentes mortales, se sugiere implementar medidas específicas para mejorar la seguridad de los motociclistas. Esto podría incluir programas de capacitación obligatorios, controles de seguridad más estrictos y campañas de concientización.
+
+4. **Enfoque en comuna 1**: Debido a la alta incidencia de accidentes mortales en la Comuna 1, se propone intensificar las iniciativas de seguridad vial en esta área. Esto podría incluir la implementación de medidas de control de velocidad, mejoras en la señalización y programas educativos específicos para la comunidad local.
+
+5. **Evaluación de restricciones COVID-19**: Dado el descenso en el número de muertes anuales en 2020 debido a las restricciones de movilidad por la pandemia, sería beneficioso evaluar la posibilidad de mantener ciertas restricciones para reducir la tasa de accidentes mortales, ajustándolas según la situación actual.
+
+6. **Refuerzo en meses de mayor riesgo**: Dado que diciembre presenta una mayor cantidad de siniestros mortales, se sugiere implementar medidas especiales de vigilancia y concientización durante este mes. Esto podría incluir campañas específicas y un aumento de patrullajes.
+
+7. **Implementación de Estrategias en Otras áreas**: Considerando que las autopistas muestran la menor cantidad de siniestros mortales, se sugiere estudiar las estrategias de seguridad vial utilizadas en estas vías y evaluar su aplicación en otras áreas con tasas de accidentes más elevadas.
+
+
+
+
+
 
