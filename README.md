@@ -106,6 +106,43 @@ Se observa que 'motos', 'autos', 'ciclista' y 'peatón' son los vehiculos más l
 ![Siniestros_por_tipo_de_vehículos__acusados](Imágenes/10_Siniestros_por_tipo_de_vehículos__acusados.png)
 ![Siniestros_por_tipo_de_vehículos__víctimas](Imágenes/11_Siniestros_por_tipo_de_vehículos__víctimas.png)
 
+## KPIs
+
+### 1. **Reducir en un 10% la tasa de homicidios en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios en siniestros viales del semestre anterior**
+
+La tasa de homicidios en accidentes de tráfico se calcula como la cantidad de muertes en dichos incidentes por cada 100,000 habitantes en una región y tiempo determinados. La ecuación utilizada es: $$\frac{\text{Número de homicidios en siniestros viales}}{\text{Población total}} \times 100,000$$
+
+Para el **Número de Muertes en Accidentes de Tráfico**, se usa la variable 'nro_victimas' del conjunto de datos.
+La **Población Total** se obtiene del **Censo 2022** proporcionado por el INDEC.
+
+    Resumen de resultados:
+    Fecha de inicio del semestre actual: 2021-06-30 00:00:00
+    Fecha de inicio del semestre anterior: 2020-12-30 00:00:00
+    Tasa de homicidios en siniestros viales del semestre anterior: 1.76%
+    Tasa de homicidios en siniestros viales del semestre actual: 1.35%
+    Reducción porcentual: 23.64%
+    La reduccion de tasa de homicidios en siniestros viales respecto al semestre anterior cumple con el objetivo del 10%
+
+### 2. Reducir en un 7% la cantidad de accidentes mortales de motociclistas en el último año, en CABA, respecto al año anterior
+
+La cantidad de accidentes mortales de motociclistas se calcula contabilizando los siniestros fatales que involucran motociclistas en un periodo específico. La fórmula para determinar el cambio en estos accidentes es: $$\frac{(\text{Accidentes mortales con motociclistas el año pasado} - \text{Accidentes mortales con motociclistas este año})}{\text{Accidentes mortales con motociclistas el año pasado}} \times 100$$
+
+Para **Accidentes Mortales en Moto**, se utiliza la variable 'Victima' que coincide con la categoría [moto] en el conjunto de datos.
+
+    Resumen de resultados:
+    Fecha de inicio del año actual: 2020-12-30 00:00:00
+    Fecha de inicio del año anterior: 2019-12-30 00:00:00
+    Cantidad de homicidios en moto en el año anterior: 28.00%
+    Cantidad de homicidios en moto en el año actual: 46.00%
+    Reducción porcentual: -64.29%
+    La reduccion de homicidios en siniestros viales en moto respecto al año anterior no cumple con el objetivo del 7%
+
+### 3. Tasa de mortalidad en siniestros viales CABA vs provincias Argentinas (año 2019)
+
+    Resumen de resultados:
+    Performance tasa de homicidios CABA vs resto del pais: 21.55% (CABA solo representa el 21.55% de los homicidios medios del páis)
+    Tasa de homicidios en siniestros viales del 2019: 2.79%
+
 ## Cómo Contribuir
 
 1. **Análisis continuo**: Se recomienda mantener un seguimiento constante de los datos sobre homicidios en siniestros viales en la Ciudad de Buenos Aires. Esto permitirá identificar tendencias a lo largo del tiempo y evaluar la efectividad de las medidas implementadas.
@@ -122,8 +159,13 @@ Se observa que 'motos', 'autos', 'ciclista' y 'peatón' son los vehiculos más l
 
 7. **Implementación de Estrategias en Otras áreas**: Considerando que las autopistas muestran la menor cantidad de siniestros mortales, se sugiere estudiar las estrategias de seguridad vial utilizadas en estas vías y evaluar su aplicación en otras áreas con tasas de accidentes más elevadas.
 
+## Dashboard web
 
+El dashboard trabajado puede ser consultado vía web sin necesidad de descargar ningún software (Power BI) a través del siguiente enlace:
 
+<https://app.powerbi.com/view?r=eyJrIjoiMjMzZGRjNWUtNjg1NC00OGFlLTg5NDgtZDE5NTg2ZTM5ZTE5IiwidCI6IjgzZGMwYzk0LWRkNTgtNDlmNC05YmI0LTU4NDhjMWM3NmYzYyJ9>
+
+[![Power BI imagen](Imágenes/Power_BI.png)](https://app.powerbi.com/view?r=eyJrIjoiMjMzZGRjNWUtNjg1NC00OGFlLTg5NDgtZDE5NTg2ZTM5ZTE5IiwidCI6IjgzZGMwYzk0LWRkNTgtNDlmNC05YmI0LTU4NDhjMWM3NmYzYyJ9)
 
 
 
