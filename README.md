@@ -170,6 +170,3 @@ El dashboard trabajado puede ser consultado vía web sin necesidad de descargar 
 <https://app.powerbi.com/view?r=eyJrIjoiMjMzZGRjNWUtNjg1NC00OGFlLTg5NDgtZDE5NTg2ZTM5ZTE5IiwidCI6IjgzZGMwYzk0LWRkNTgtNDlmNC05YmI0LTU4NDhjMWM3NmYzYyJ9>
 
 [![Power BI imagen](Imágenes/Power_BI.png)](https://app.powerbi.com/view?r=eyJrIjoiMjMzZGRjNWUtNjg1NC00OGFlLTg5NDgtZDE5NTg2ZTM5ZTE5IiwidCI6IjgzZGMwYzk0LWRkNTgtNDlmNC05YmI0LTU4NDhjMWM3NmYzYyJ9)
-
-
-
