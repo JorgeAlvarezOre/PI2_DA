@@ -1,8 +1,5 @@
 # Resumen de lo pedido
 - Notebooks > Readme.md > Dashboard > Repositorio
-- Readme.md: Detalle de archivos y carpetas del  repositorio. Reporte de análisis en base a dashboards
-- ¿Mapas? con data de cámaras y comunas
-- Archivo enviroment
 
 # Comandos
 - conda create --name PI2 python==3.11 ipykernel numpy pandas matplotlib seaborn openpyxl geopandas
@@ -12,10 +9,6 @@
 - conda install conda-forge::seaborn
 - conda env export > environment.yml
 - conda env create -f environment.yml
-
-# Falta
-- Actualizar población CABA
-- Elegir 3er KPI
 
 # Definición de kpi (Según copilot)
 Un **KPI** (Key Performance Indicator o Indicador Clave de Rendimiento) es una métrica cuantitativa que indica el progreso hacia un objetivo. En el contexto del análisis de datos, los KPIs son fundamentales porque permiten a las empresas evaluar su rendimiento y tomar decisiones estratégicas basadas en datos.

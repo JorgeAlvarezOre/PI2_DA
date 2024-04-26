@@ -27,12 +27,16 @@ Se utilizó las siguientes herramientas (Stack tecnológico):
 
 ## Estructura del repositorio
 
-- Carpeta Datasets: Donde se encuentran los archivos originales sin modificación que se usaron en el proyecto.
-- Carpeta Notebooks: Donde se encuentran los notebooks de trabajo preliminar de ETL, EDA y KPis.
+- Carpeta Datasets: Donde se encuentran los archivos originales sin modificación que se usaron en el proyecto
+- Carpeta Imágenes: Donde se encuentran imágenes para mostrar en este readme.md y el dashboard.pbix
+- Carpeta Notebooks: Donde se encuentran los notebooks de trabajo preliminar de ETL, EDA y KPis
+- Carpeta Shapefile: Donde se encuentran los archivos geoespaciales ESRI Shapefile y TopoJSON para visualizaciones de mapas
 - Archivo .gitigonre: Archivo para establecer las carpetas y archivos que no serán revisados por el sistema Git
+- Archivo Dashboard.pbix:  Dashboard Power BI con tableros resúmenes interactivos de lo más resaltante del proyecto de análisis de datos
+- Archivo environment.yml: Archivo de configuración Anaconda para crear un enviroment con todas las dependencias/librerias necesarias para este proyecto (conda env create -f environment.yml) 
 - Archivo Notas.md: Simples notas del autor
 - Archivo README.md: Este archivo
-- DashBoard .pbi:x  Archivo Power BI con un tablero resumen interactivo de todo lo hayado en el proyecto _______________________________________________________________________
+
 
 ## Desarrollo
 
@@ -137,7 +141,7 @@ Para **Accidentes Mortales en Moto**, se utiliza la variable 'Victima' que coinc
     Reducción porcentual: -64.29%
     La reduccion de homicidios en siniestros viales en moto respecto al año anterior no cumple con el objetivo del 7%
 
-### 3. Tasa de mortalidad en siniestros viales CABA vs provincias Argentinas (año 2019)
+### 3. Tasa de mortalidad en siniestros viales en CABA sea menor a la media nacional (provincias Argentinas) en el año 2019
 
     Resumen de resultados:
     Performance tasa de homicidios CABA vs resto del pais: 21.55% (CABA solo representa el 21.55% de los homicidios medios del páis)
